@@ -2,7 +2,8 @@
 let myName = "Mannuel"; // string
 let orderNumber = 100;  // Number
 let isDelivered = true; // Boolean
-myName = "faer"
+myName = "faer";
+
 // Explicit types
 // declare var with no value.
 let userName: string;

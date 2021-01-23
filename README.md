@@ -38,7 +38,7 @@ In the root of your website project initialise TypeScript. TS will create a `tsc
 tsc
 ```
 
-Run the TypeScript --init flag to initialise your project as a TypeScript project. 
+Run the TypeScript `--init` flag to initialise your project as a TypeScript project.
 
 ```bash
 tsc --init
@@ -101,7 +101,7 @@ let monthlyPromo = 50; // can use :any , opting out of type safety, last resort
 ## Describe structure of complex types
 
 ```js
-function getInventoryItem(trackingNumber: string): {
+function getProduct(trackingNumber: string): {
   displayName: string;
   inventoryType: string;
   trackingNumber: string;
@@ -115,7 +115,7 @@ function getInventoryItem(trackingNumber: string): {
 ## Interfaces
 
 ```js
-interface InventoryItem {
+interface Product {
   inventoryType: string;
   trackingNumber: string;
   createDate: Date;
@@ -130,14 +130,14 @@ Other option is an Interface, the more information TypeScript has about your obj
 - use it a lot, the more information you give it the better
 
 ```js
-interface InventoryItem {
+interface Product {
   inventoryType: string;
   trackingNumber: string;
   createDate: Date;
   originalCost: number;
 }
 
-function getInventoryItem(trackingNumber: string): InventoryItem {
+function getProduct(trackingNumber: string): Product {
   return null;
 }
 ```
@@ -149,7 +149,7 @@ Adding a question mark after the function name, tells TypeScript that this metho
 use question mark Optional param to optionally remove a property.
 
 ```js
-interface InventoryItem {
+interface Product {
   inventoryType: string;
   addNote?: (note: string) => string;
 }
@@ -160,7 +160,7 @@ interface InventoryItem {
 This will make a property fixed, not allow you to change it.
 
 ```js
-interface InventoryItem {
+interface Product {
   inventoryType: string;
   readonly createDate: Date;
   addNote?: (note: string) => string;
@@ -170,7 +170,7 @@ interface InventoryItem {
 ## Enums
 
 ```js
-enum InventoryItemType {
+enum ProductType {
   Computer = "Computer",
   Furniture = "Furniture"
 }
@@ -181,7 +181,7 @@ enum InventoryItemType {
 Define the list of possible values
 
 ```js
-interface InventoryItem {
+interface Product {
   inventoryType: "computer" | "furniture";
   addNote?: (note: string) => string;
 }
@@ -200,7 +200,7 @@ interface Category {
 
 class InventoryStore {
   _categories: Category[] = [];
-  _items: InventoryItem[] = [];
+  _items: Product[] = [];
   _isInitialized: Promise<boolean>;
 
   get categories() {
@@ -222,9 +222,9 @@ Only visible to members within the same class and derived classes.
 Visible to all consumers.
 
 ```js
-class InventoryStore {
+class ProductsStore {
   private _categories: Category[] = [];
-  private _items: InventoryItem[] = [];
+  private _items: Product[] = [];
   private _isInitialized: Promise<boolean>;
 
   get categories() {
@@ -237,14 +237,14 @@ class InventoryStore {
 
 ## Generics
 
-Can describe a vareity of types
+Can describe a variety of types
 
 ```js
 
 
 ```
 
-## Tel TypeScript to look at JavaScript files as well.
+## Tel TypeScript to look at JavaScript files as well
 
 Add a few settings to the configurations file. Now TS will also check any JS files for compile time errors. Its not as good as completely changing your files over to TS, but it's better than nothing.
 
