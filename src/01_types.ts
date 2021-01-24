@@ -1,8 +1,8 @@
-
-let myName = "Mannuel"; // string
-let orderNumber = 100;  // Number
-let isDelivered = true; // Boolean
-myName = "faer";
+let displayName: string = "Mannuel Ferreira";
+let productType: string = "piano";
+let trackingNumber: string = "FD123455";
+let createDate: Date = new Date();
+let cost: number = 300;
 
 // Explicit types
 // declare var with no value.
@@ -14,9 +14,23 @@ myName = "John"
 //orderNumber = "One hundred"
 //isDelivered = "Yes is its delivered"
 
-console.log(myName);
-console.log(orderNumber);
-console.log(isDelivered);
+console.log(displayName);
+console.log(productType);
+console.log(trackingNumber);
+
+enum Color {
+  Red,
+  Green,
+  Blue
+}
+
+const shoe = {
+  size: 32,
+  color: Color.Blue
+}
+
+shoe.color = Color.Red;
+
 
 /*
     01. TypeScript use strict types, JavaScript does not.
@@ -44,7 +58,6 @@ console.log(order_date);
 // use it sparingly if at all because it reverses what TS is doing for you.
 
 /*
-
   Valid JavaScript is Valid TypeScript, just write normal JS and few extra things, lets get into it.
   TypeScript is a language that is a superset of JavaScript: JS syntax is therefore legal TS
 

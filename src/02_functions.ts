@@ -1,5 +1,17 @@
 import { helloWorld } from "./hello_world.js"
 
+function getProduct(trackingNumber: string): {
+  displayName: string;
+  productType: string;
+  trackingNumber: string;
+  createDate: Date;
+  originalCost: number;
+} {
+  return null;
+}
+
+getProduct("aksdjaksdjh")
+
 type StringOrNumber = string | number;
 
 helloWorld("Halllloooo");
