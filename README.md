@@ -55,7 +55,7 @@ The `tsconfig.json` will have many properties but we only care about a few for n
     "rootDir": "./src",      // 04. tel TS what folder the TS source files live in
     "strict": true,          // 05. tel TS to sun in strict mode
   },
-  "include": ["./src"]  // 06.tell TS to only compile TS files from the SRC folder.
+  "include": ["./src"]       // 06. tell TS to only compile TS files from the SRC folder.
 }
 ```
 
@@ -65,7 +65,7 @@ The `tsconfig.json` will have many properties but we only care about a few for n
 {
   ...
   "include": ["./src/**/*"], // 07. Glob for many folders.
-  "exclude":[                // 08. Glob for many folders.
+  "exclude":[                // 08. Exclude  folders.
     "./someFolder/**/*.spec.ts",
     "./folder/someSubFolder"
   ]
